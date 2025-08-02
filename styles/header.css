@@ -1,12 +1,22 @@
 @charset "UTF-8";
 
+
 .menu-hamburguer {
-    width: 24px;
-    height: 24px;
+    width: 39px;
+    height: 39px;
     background-image: url("../assets/Menu.svg");
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
+    
+}
+
+.container-botao:checked ~ .container-rotulo > .menu-hamburguer {
+    background-image: url("../assets/Menu-Aberto.svg");
+}
+
+.container-botao:checked ~ .container-rotulo {
+    background: var(--cor-gradiente);
 }
 
 header {
@@ -17,9 +27,15 @@ header {
     position: relative;
 }
 
+
 .container {
     display: flex;
     align-items: center;
+}
+
+
+.cabecalho-titulo {
+    display: none;
 }
 
 .icone {
@@ -55,6 +71,94 @@ header {
     text-transform: uppercase;
 }
 
+.menu-expandido {
+    display: none;
+}
+
 .container-botao {
     display: none;
+}
+
+.icone-texto {
+    display: none;
+}
+
+@media screen and (min-width:  1024px) {
+    .cabecalho-titulo {
+        font-size: 2em;
+        font-family: var(--fonte-secundaria);
+        display: block;
+        margin-top: 0.25em;
+    }
+
+    .cabecalho-titulo strong {
+        font-weight: 700;
+    }
+    
+
+    .menu-expandido {
+        display: flex;
+        text-transform: uppercase;
+    }
+
+    .menu-expandido-item {
+        padding: 0 1em;;
+    }
+    .menu-expandido-item a {
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .transparente {
+        display: none;
+    }
+
+    .opcoes-botao:checked ~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes-botao{
+        display: none;
+    }
+
+    .opcoes-botao:checked ~ .menu-expandido-rotulo > .menu-expandido-item {
+        background: var(--cor-gradiente);
+        color: var(--branco);
+    }
+
+    .menu-expandido-item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu-item:hover, .menu-expandido-item:hover{
+        background: var(--cor-gradiente);
+        -webkit-text-fill-color: var(--branco);
+    }
+
+    .lista-menu-item:hover > a{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    header {
+        padding: 0 2em;
+    }
+
+    .container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .menu-expandido {
+        margin-right: auto;
+    }
+
+    .icone-texto {
+    display: block;
+    }
 }

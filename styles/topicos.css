@@ -29,5 +29,35 @@
     color: white;
     background-color: var(--cor-titulo);
     padding: 1em;
+    box-sizing: border-box;
 }
 
+.topicos-item a:hover {
+    background-color: var(--branco);
+    color: var(--cor-titulo);
+}
+
+@media screen and (min-width: 1024px) {
+    .topicos {
+        padding: 2.5em 5em;
+    }
+
+    .topicos-titulo {
+        font-size: 1.5em;
+    }
+
+    .topicos-item {
+        margin: 3.5em 1em;
+    }
+
+    .topicos-item a {
+        font-size: 1.5em;
+        padding: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos {
+        padding: 3em 25vw;
+    }
+}
