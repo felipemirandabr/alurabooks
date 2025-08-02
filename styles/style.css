@@ -1,12 +1,26 @@
 @charset "UTF-8";
 
 @import url("header.css");
+@import url("banner.css");
+@import url("carrossel.css");
+@import url("topicos.css");
+@import url("contato.css");
+@import url("footer.css");
 
 :root {
     --cor-de-fundo: #EBECEE;
-    --cor-de-fundo-alternativa: #FFFFFF;
+    --branco: #FFFFFF;
+    --branco-alt: #F9F9F9;
+    --cor-titulo: #EB9B00;
+    --cor-titulo-alt: #002F52;
+    --cor-gradiente: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --cor-linha: #858585;
+    --fonte-principal: "poppins", sans-serif;
 }
 
 body {
     background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 1em;
+    font-weight: 400;
 }

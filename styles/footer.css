@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+footer {
+    background-color: var(branco-alt);
+    padding: 1.5em;
+    border-top: 1px solid var(--cor-linha);
+}
+
